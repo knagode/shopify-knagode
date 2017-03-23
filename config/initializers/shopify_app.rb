@@ -7,10 +7,10 @@ ShopifyApp.configure do |config|
 
   app_url = "https://4563d519.ngrok.io"
 
-  config.webhooks = [
-      {topic: 'carts/update', address: "#{app_url}/webhooks/carts_update"},
-      {topic: 'products/update', address: "#{app_url}/webhooks/products_update"} #, fields: ['title', 'vendor']}
-    ]
+  # config.webhooks = [
+  #     {topic: 'carts/update', address: "#{app_url}/webhooks/carts_update"},
+  #     {topic: 'products/update', address: "#{app_url}/webhooks/products_update"} #, fields: ['title', 'vendor']}
+  #   ]
   config.scripttags = [
       {event:'onload', src: "#{app_url}/fancy.js"}
       #{event:'onload', src: ->(domain) { dynamic_tag_url(domain) } }
